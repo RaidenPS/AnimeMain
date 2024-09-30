@@ -3,12 +3,10 @@ package raidengame.connection;
 // Imports
 import raidengame.Main;
 import raidengame.connection.base.BasePacket;
-import raidengame.connection.base.PacketIds;
 import raidengame.connection.events.SendPacketEvent;
 import raidengame.connection.kcp.*;
 import raidengame.game.player.Player;
 import raidengame.game.player.account.Account;
-import raidengame.misc.classes.Randomizer;
 import raidengame.misc.classes.XorAlgo;
 import raidengame.server.GameServer;
 import io.netty.buffer.ByteBuf;
@@ -17,8 +15,10 @@ import lombok.Getter;
 import lombok.Setter;
 import java.net.InetSocketAddress;
 
+// Packets
+import raidengame.connection.packets.send.notify.PacketServerDisconnectClientNotify;
+
 public class GameSession implements KcpChannel {
-    // Objects
     @Getter private final GameServer server;
     private KcpTunnel tunnel;
     @Getter @Setter private Account account;
@@ -27,7 +27,7 @@ public class GameSession implements KcpChannel {
 
     // Crypto
     @Getter private long encryptSeed;
-    private byte[] encryptKey;
+    private final byte[] encryptKey;
     @Setter private boolean useSecretKey;
 
     // Integer
@@ -39,8 +39,11 @@ public class GameSession implements KcpChannel {
         this.server = server;
         this.state = SessionState.WAITING_FOR_TOKEN;
         this.lastPingTime = System.currentTimeMillis();
-        this.encryptKey = new byte[4096];
-        this.encryptSeed = Randomizer.generateEncryptKeyAndSeed(this.encryptKey);
+
+        this.encryptSeed = Encryption.ENCRYPT_SEED;
+        this.encryptKey = Encryption.ENCRYPT_KEY;
+        //this.encryptKey = new byte[4096];
+        //this.encryptSeed = Randomizer.generateEncryptKeyAndSeed(this.encryptKey);
     }
 
     public InetSocketAddress getAddress() {
@@ -102,7 +105,7 @@ public class GameSession implements KcpChannel {
                 }
                 tunnel.writeData(bytes);
             } catch (Exception ex) {
-                Main.getLogger().debug("Unable to send packet to client.", ex);
+                Main.getLogger().debug("[Send] Error -> %s", ex.getMessage());
             }
         }
     }
@@ -110,7 +113,7 @@ public class GameSession implements KcpChannel {
     @Override
     public void onConnected(KcpTunnel tunnel) {
         this.tunnel = tunnel;
-        Main.getLogger().info("Connected client -> %s", this.getAddress().toString());
+        Main.getLogger().info("[Connect] Connected client -> %s", this.getAddress().toString());
     }
 
     /**
@@ -130,7 +133,7 @@ public class GameSession implements KcpChannel {
                 // Packet sanity check
                 int const1 = packet.readShort();
                 if (const1 != 17767) {
-                    Main.getLogger().error("Packet sanity check failure. Invalid const: received %d, expect 17767", const1);
+                    Main.getLogger().error("[Recv] Packet sanity check failure. Invalid const: received %d, expect 17767!", const1);
                     return; // Bad begin magic
                 }
 
@@ -145,15 +148,14 @@ public class GameSession implements KcpChannel {
 
                 int const2 = packet.readShort();
                 if (const2 != -30293) {
-                    Main.getLogger().error("Packet sanity check failure. Invalid const: received %d ,expect -30293", const2);
-                    return; // Bad end magic
+                    Main.getLogger().error("[Recv] Packet sanity check failure. Invalid const: received %d, expect -30293!", const2);
+                    return;
                 }
 
-                // Handle
                 getServer().getPacketHandler().handle(this, opcode, header, payload);
             }
         } catch (Exception ex) {
-            Main.getLogger().error("GameSession suddenly threw an error on handleReceive.handle()", ex);
+            Main.getLogger().error("[Recv] Error -> ", ex.getMessage());
         } finally {
             packet.release();
         }
@@ -162,12 +164,12 @@ public class GameSession implements KcpChannel {
     @Override
     public void handleClose() {
         setState(SessionState.INACTIVE);
-        Main.getLogger().info("Disconnected client -> %s", this.getAddress().toString());
+        Main.getLogger().info("[Connect] Disconnected client -> %s", this.getAddress().toString());
         if (this.isLoggedIn()) {
             Player player = getPlayer();
             player.onLogout();
         }
-        this.send(new BasePacket(PacketIds.ServerDisconnectClientNotify));
+        this.send(new PacketServerDisconnectClientNotify());
         tunnel = null;
     }
 
@@ -177,14 +179,5 @@ public class GameSession implements KcpChannel {
 
     public boolean isActive() {
         return getState() == SessionState.ACTIVE;
-    }
-
-    public enum SessionState {
-        INACTIVE,
-        WAITING_FOR_TOKEN,
-        WAITING_FOR_LOGIN,
-        PICKING_CHARACTER,
-        ACTIVE,
-        ACCOUNT_BANNED
     }
 }

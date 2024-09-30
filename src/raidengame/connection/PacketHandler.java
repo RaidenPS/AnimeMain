@@ -6,11 +6,9 @@ import raidengame.connection.base.PacketOpcode;
 import raidengame.connection.base.Packet;
 import raidengame.connection.base.PacketIds;
 import raidengame.connection.events.ReceivePacketEvent;
-import raidengame.connection.utils.Utils;
+import raidengame.connection.utils.PacketMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-
-import static raidengame.connection.GameSession.SessionState;
 
 public final class PacketHandler {
     private final Int2ObjectMap<Packet> handlers;
@@ -29,7 +27,7 @@ public final class PacketHandler {
             var packetHandler = handlerClass.getDeclaredConstructor().newInstance();
             this.handlers.put(opcode.value(), packetHandler);
         } catch (Exception e) {
-            Main.getLogger().warn("Unable to register handler {}.", handlerClass.getSimpleName());
+            Main.getLogger().warn("Unable to register handler: %s", handlerClass.getSimpleName());
         }
     }
 
@@ -82,6 +80,6 @@ public final class PacketHandler {
             }
             return;
         }
-        Main.getLogger().info("Unhandled packet (%d): %s".formatted(opcode, Utils.getOpcodeName(opcode)));
+        Main.getLogger().info("Unhandled packet (%d): %s", opcode, PacketMap.getOpcodeName(opcode));
     }
 }

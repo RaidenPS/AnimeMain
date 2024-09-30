@@ -2,8 +2,12 @@ package raidengame.connection;
 
 // Imports
 import raidengame.Main;
+import raidengame.misc.classes.Base64;
+import raidengame.misc.classes.CustomPair;
 import raidengame.misc.classes.FileMan;
+import javax.crypto.Cipher;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.file.Path;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
@@ -43,7 +47,7 @@ public final class Encryption {
                     }
                 }
             }
-            Main.getLogger().debug(String.format("Loaded total public keys: %d", EncryptionKeys.size()));
+            Main.getLogger().debug("Loaded total public keys: %d", EncryptionKeys.size());
             Main.getLogger().info("Encryption initialized successfully.");
         }
         catch (IOException e) {
@@ -51,6 +55,34 @@ public final class Encryption {
         }
         catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
             Main.getLogger().critical("Unable to load the encryption.", e);
+        }
+    }
+
+    /**
+     * OnGetPlayerTokenRsp Decrypt Seed
+     * @param encryptSeed Session's encryption seed.
+     * @param client_rand_key Client's random key.
+     * @param key_id Client's key id.
+     * @return Encrypted seed and signature of private key. (BASE64)
+     */
+    public static CustomPair<String, String> prepareRegionLoginSignature(long encryptSeed, String client_rand_key, int key_id) {
+        try {
+            var cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
+            cipher.init(Cipher.DECRYPT_MODE, CUR_SIGNING_KEY);
+
+            var clientSeedEncrypted = Base64.base64Decode(client_rand_key);
+            var clientSeed = ByteBuffer.wrap(cipher.doFinal(clientSeedEncrypted)).getLong();
+            var seedBytes = ByteBuffer.wrap(new byte[8]).putLong(encryptSeed ^ clientSeed).array();
+
+            cipher.init(Cipher.ENCRYPT_MODE, EncryptionKeys.get(key_id));
+            var seedEncrypted = cipher.doFinal(seedBytes);
+
+            var privateSignature = Signature.getInstance("SHA256withRSA");
+            privateSignature.initSign(CUR_SIGNING_KEY);
+            privateSignature.update(seedBytes);
+            return new CustomPair<>(Base64.base64Encode(seedEncrypted), Base64.base64Encode(privateSignature.sign()));
+        }catch (Exception ignored) {
+            return null;
         }
     }
  }

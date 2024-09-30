@@ -75,13 +75,15 @@ public class SessionManager {
                                 conversation.handleReceive(byteData);
                             }
                         } catch (Exception e) {
-                            Main.getLogger().error(String.format("Unable to receive a packet from kcp. Exception: %s", e.getMessage()));
+                            Main.getLogger().error("[Recv] Error -> %s", e.getMessage());
                         }
                     });
         }
 
         @Override
-        public void handleException(Throwable ex, Ukcp ukcp) {}
+        public void handleException(Throwable ex, Ukcp ukcp) {
+            Main.getLogger().error(ex.getMessage());
+        }
 
         @Override
         public void handleClose(Ukcp ukcp) {
