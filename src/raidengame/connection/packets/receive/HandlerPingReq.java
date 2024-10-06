@@ -1,7 +1,6 @@
 package raidengame.connection.packets.receive;
 
 // Imports
-import com.google.protobuf.InvalidProtocolBufferException;
 import raidengame.connection.GameSession;
 import raidengame.connection.base.*;
 
@@ -15,7 +14,7 @@ import raidengame.cache.protobuf.PingReqOuterClass.PingReq;
 @PacketOpcode(PacketIds.PingReq)
 public class HandlerPingReq extends Packet {
     @Override
-    public void handle(GameSession session, byte[] header, byte[] payload) throws InvalidProtocolBufferException {
+    public void handle(GameSession session, byte[] header, byte[] payload) throws Exception {
         PacketHead head = PacketHead.parseFrom(header);
         PingReq req = PingReq.parseFrom(payload);
 

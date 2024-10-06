@@ -110,6 +110,10 @@ public class GameSession implements KcpChannel {
         }
     }
 
+    public void logPacketRetcode(int retcode, String step, String message) {
+        Main.getLogger().debug("[" + step + "] " + message + " : " + String.valueOf(retcode));
+    }
+
     @Override
     public void onConnected(KcpTunnel tunnel) {
         this.tunnel = tunnel;
@@ -163,7 +167,7 @@ public class GameSession implements KcpChannel {
 
     @Override
     public void handleClose() {
-        setState(SessionState.INACTIVE);
+        this.setState(SessionState.INACTIVE);
         Main.getLogger().info("[Connect] Disconnected client -> %s", this.getAddress().toString());
         if (this.isLoggedIn()) {
             Player player = getPlayer();

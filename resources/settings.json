@@ -1,0 +1,19 @@
+{
+  "isDebug": true,
+  "isMaintenance": false,
+  "kcpInfo": {
+    "kcpInterval": 3,
+    "kcpTimeout": 5000,
+    "kcpMtu": 1400,
+    "kcpSndwnd": 256,
+    "kcpRcvwnd": 256,
+    "gateserverIP": "127.0.0.1",
+    "gateserverPort": 8882
+  },
+  "maintenance": {
+    "start_time": 1726943028,
+    "end_time": 1787943028,
+	"message": "The private server is under maintenance. Check github for update!",
+	"url": "https://github.com/RaidenPS/"
+  }
+}

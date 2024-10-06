@@ -1,7 +1,9 @@
 package raidengame;
 
 // Imports
+import raidengame.configuration.ConfigManager;
 import raidengame.connection.Encryption;
+import raidengame.database.DatabaseManager;
 import raidengame.misc.CustomLogger;
 import raidengame.server.GameServer;
 import lombok.Getter;
@@ -13,7 +15,9 @@ public class Main {
     public static Reflections reflector = new Reflections("raidengame");
 
     public static void main(String[] args) {
+        ConfigManager.loadConfig();
         Encryption.loadCryptoKeys();
+        DatabaseManager.initialize();
 
         gameServer = new GameServer();
     }

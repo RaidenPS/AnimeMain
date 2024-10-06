@@ -5,6 +5,21 @@ import java.security.SecureRandom;
 
 public final class Randomizer {
     private static final SecureRandom secureRandom = new SecureRandom();
+    private static final String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    /**
+     * Generates a unique token for every action type like reactivate an account or device check.
+     */
+    public static String generateActionToken(int length) {
+        StringBuilder sb = new StringBuilder(length);
+
+        for (int i = 0; i < length; i++) {
+            int index = secureRandom.nextInt(characters.length());
+            sb.append(characters.charAt(index));
+        }
+
+        return sb.toString();
+    }
 
     /**
      * Generates a unique encryption key for every player.

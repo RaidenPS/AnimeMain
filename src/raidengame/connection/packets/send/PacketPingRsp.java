@@ -15,6 +15,7 @@ public class PacketPingRsp extends BasePacket {
         PingRsp proto =
                 PingRsp.newBuilder()
                     .setRetcode(RETCODE_SUCC)
+                    .setSeq(clientSeq)
                     .setClientTime(time)
                     .build();
 

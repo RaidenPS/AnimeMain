@@ -220,10 +220,10 @@ public final class GetPlayerTokenRspOuterClass {
     boolean getIsLoginWhiteList();
 
     /**
-     * <code>uint32 sign_type = 576;</code>
-     * @return The signType.
+     * <code>uint32 reg_minor_age = 576;</code>
+     * @return The regMinorAge.
      */
-    int getSignType();
+    int getRegMinorAge();
 
     /**
      * <code>uint32 authkey_ver = 630;</code>
@@ -232,10 +232,10 @@ public final class GetPlayerTokenRspOuterClass {
     int getAuthkeyVer();
 
     /**
-     * <code>uint32 cloudClientIp = 847;</code>
-     * @return The cloudClientIp.
+     * <code>uint32 sign_type = 847;</code>
+     * @return The signType.
      */
-    int getCloudClientIp();
+    int getSignType();
 
     /**
      * <code>uint32 tag = 853;</code>
@@ -339,16 +339,16 @@ public final class GetPlayerTokenRspOuterClass {
         getPsnIdBytes();
 
     /**
-     * <code>string JLCDDOJGKKG = 2042;</code>
-     * @return The jLCDDOJGKKG.
+     * <code>string auth_appid = 2042;</code>
+     * @return The authAppid.
      */
-    java.lang.String getJLCDDOJGKKG();
+    java.lang.String getAuthAppid();
     /**
-     * <code>string JLCDDOJGKKG = 2042;</code>
-     * @return The bytes for jLCDDOJGKKG.
+     * <code>string auth_appid = 2042;</code>
+     * @return The bytes for authAppid.
      */
     com.google.protobuf.ByteString
-        getJLCDDOJGKKGBytes();
+        getAuthAppidBytes();
   }
   /**
    * <pre>
@@ -384,7 +384,7 @@ public final class GetPlayerTokenRspOuterClass {
       clientIpStr_ = "";
       sign_ = "";
       psnId_ = "";
-      jLCDDOJGKKG_ = "";
+      authAppid_ = "";
     }
 
     @java.lang.Override
@@ -560,7 +560,7 @@ public final class GetPlayerTokenRspOuterClass {
             }
             case 4608: {
 
-              signType_ = input.readUInt32();
+              regMinorAge_ = input.readUInt32();
               break;
             }
             case 5040: {
@@ -570,7 +570,7 @@ public final class GetPlayerTokenRspOuterClass {
             }
             case 6776: {
 
-              cloudClientIp_ = input.readUInt32();
+              signType_ = input.readUInt32();
               break;
             }
             case 6824: {
@@ -643,7 +643,7 @@ public final class GetPlayerTokenRspOuterClass {
             case 16338: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              jLCDDOJGKKG_ = s;
+              authAppid_ = s;
               break;
             }
             default: {
@@ -1162,15 +1162,15 @@ public final class GetPlayerTokenRspOuterClass {
       return isLoginWhiteList_;
     }
 
-    public static final int SIGN_TYPE_FIELD_NUMBER = 576;
-    private int signType_;
+    public static final int REG_MINOR_AGE_FIELD_NUMBER = 576;
+    private int regMinorAge_;
     /**
-     * <code>uint32 sign_type = 576;</code>
-     * @return The signType.
+     * <code>uint32 reg_minor_age = 576;</code>
+     * @return The regMinorAge.
      */
     @java.lang.Override
-    public int getSignType() {
-      return signType_;
+    public int getRegMinorAge() {
+      return regMinorAge_;
     }
 
     public static final int AUTHKEY_VER_FIELD_NUMBER = 630;
@@ -1184,15 +1184,15 @@ public final class GetPlayerTokenRspOuterClass {
       return authkeyVer_;
     }
 
-    public static final int CLOUDCLIENTIP_FIELD_NUMBER = 847;
-    private int cloudClientIp_;
+    public static final int SIGN_TYPE_FIELD_NUMBER = 847;
+    private int signType_;
     /**
-     * <code>uint32 cloudClientIp = 847;</code>
-     * @return The cloudClientIp.
+     * <code>uint32 sign_type = 847;</code>
+     * @return The signType.
      */
     @java.lang.Override
-    public int getCloudClientIp() {
-      return cloudClientIp_;
+    public int getSignType() {
+      return signType_;
     }
 
     public static final int TAG_FIELD_NUMBER = 853;
@@ -1473,38 +1473,38 @@ public final class GetPlayerTokenRspOuterClass {
       }
     }
 
-    public static final int JLCDDOJGKKG_FIELD_NUMBER = 2042;
-    private volatile java.lang.Object jLCDDOJGKKG_;
+    public static final int AUTH_APPID_FIELD_NUMBER = 2042;
+    private volatile java.lang.Object authAppid_;
     /**
-     * <code>string JLCDDOJGKKG = 2042;</code>
-     * @return The jLCDDOJGKKG.
+     * <code>string auth_appid = 2042;</code>
+     * @return The authAppid.
      */
     @java.lang.Override
-    public java.lang.String getJLCDDOJGKKG() {
-      java.lang.Object ref = jLCDDOJGKKG_;
+    public java.lang.String getAuthAppid() {
+      java.lang.Object ref = authAppid_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        jLCDDOJGKKG_ = s;
+        authAppid_ = s;
         return s;
       }
     }
     /**
-     * <code>string JLCDDOJGKKG = 2042;</code>
-     * @return The bytes for jLCDDOJGKKG.
+     * <code>string auth_appid = 2042;</code>
+     * @return The bytes for authAppid.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getJLCDDOJGKKGBytes() {
-      java.lang.Object ref = jLCDDOJGKKG_;
+        getAuthAppidBytes() {
+      java.lang.Object ref = authAppid_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        jLCDDOJGKKG_ = b;
+        authAppid_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1601,14 +1601,14 @@ public final class GetPlayerTokenRspOuterClass {
       if (isLoginWhiteList_ != false) {
         output.writeBool(575, isLoginWhiteList_);
       }
-      if (signType_ != 0) {
-        output.writeUInt32(576, signType_);
+      if (regMinorAge_ != 0) {
+        output.writeUInt32(576, regMinorAge_);
       }
       if (authkeyVer_ != 0) {
         output.writeUInt32(630, authkeyVer_);
       }
-      if (cloudClientIp_ != 0) {
-        output.writeUInt32(847, cloudClientIp_);
+      if (signType_ != 0) {
+        output.writeUInt32(847, signType_);
       }
       if (tag_ != 0) {
         output.writeUInt32(853, tag_);
@@ -1641,8 +1641,8 @@ public final class GetPlayerTokenRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(psnId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1954, psnId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jLCDDOJGKKG_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2042, jLCDDOJGKKG_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authAppid_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2042, authAppid_);
       }
       unknownFields.writeTo(output);
     }
@@ -1746,17 +1746,17 @@ public final class GetPlayerTokenRspOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(575, isLoginWhiteList_);
       }
-      if (signType_ != 0) {
+      if (regMinorAge_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(576, signType_);
+          .computeUInt32Size(576, regMinorAge_);
       }
       if (authkeyVer_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(630, authkeyVer_);
       }
-      if (cloudClientIp_ != 0) {
+      if (signType_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(847, cloudClientIp_);
+          .computeUInt32Size(847, signType_);
       }
       if (tag_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -1798,8 +1798,8 @@ public final class GetPlayerTokenRspOuterClass {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(psnId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1954, psnId_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(jLCDDOJGKKG_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2042, jLCDDOJGKKG_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(authAppid_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2042, authAppid_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1869,12 +1869,12 @@ public final class GetPlayerTokenRspOuterClass {
       }
       if (getIsLoginWhiteList()
           != other.getIsLoginWhiteList()) return false;
-      if (getSignType()
-          != other.getSignType()) return false;
+      if (getRegMinorAge()
+          != other.getRegMinorAge()) return false;
       if (getAuthkeyVer()
           != other.getAuthkeyVer()) return false;
-      if (getCloudClientIp()
-          != other.getCloudClientIp()) return false;
+      if (getSignType()
+          != other.getSignType()) return false;
       if (getTag()
           != other.getTag()) return false;
       if (getRegPlatform()
@@ -1893,8 +1893,8 @@ public final class GetPlayerTokenRspOuterClass {
           .equals(other.getSign())) return false;
       if (!getPsnId()
           .equals(other.getPsnId())) return false;
-      if (!getJLCDDOJGKKG()
-          .equals(other.getJLCDDOJGKKG())) return false;
+      if (!getAuthAppid()
+          .equals(other.getAuthAppid())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1964,12 +1964,12 @@ public final class GetPlayerTokenRspOuterClass {
       hash = (37 * hash) + IS_LOGIN_WHITE_LIST_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsLoginWhiteList());
-      hash = (37 * hash) + SIGN_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getSignType();
+      hash = (37 * hash) + REG_MINOR_AGE_FIELD_NUMBER;
+      hash = (53 * hash) + getRegMinorAge();
       hash = (37 * hash) + AUTHKEY_VER_FIELD_NUMBER;
       hash = (53 * hash) + getAuthkeyVer();
-      hash = (37 * hash) + CLOUDCLIENTIP_FIELD_NUMBER;
-      hash = (53 * hash) + getCloudClientIp();
+      hash = (37 * hash) + SIGN_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getSignType();
       hash = (37 * hash) + TAG_FIELD_NUMBER;
       hash = (53 * hash) + getTag();
       hash = (37 * hash) + REG_PLATFORM_FIELD_NUMBER;
@@ -1990,8 +1990,8 @@ public final class GetPlayerTokenRspOuterClass {
       hash = (53 * hash) + getSign().hashCode();
       hash = (37 * hash) + PSN_ID_FIELD_NUMBER;
       hash = (53 * hash) + getPsnId().hashCode();
-      hash = (37 * hash) + JLCDDOJGKKG_FIELD_NUMBER;
-      hash = (53 * hash) + getJLCDDOJGKKG().hashCode();
+      hash = (37 * hash) + AUTH_APPID_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthAppid().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2184,11 +2184,11 @@ public final class GetPlayerTokenRspOuterClass {
         }
         isLoginWhiteList_ = false;
 
-        signType_ = 0;
+        regMinorAge_ = 0;
 
         authkeyVer_ = 0;
 
-        cloudClientIp_ = 0;
+        signType_ = 0;
 
         tag_ = 0;
 
@@ -2208,7 +2208,7 @@ public final class GetPlayerTokenRspOuterClass {
 
         psnId_ = "";
 
-        jLCDDOJGKKG_ = "";
+        authAppid_ = "";
 
         return this;
       }
@@ -2266,9 +2266,9 @@ public final class GetPlayerTokenRspOuterClass {
           result.stopServer_ = stopServerBuilder_.build();
         }
         result.isLoginWhiteList_ = isLoginWhiteList_;
-        result.signType_ = signType_;
+        result.regMinorAge_ = regMinorAge_;
         result.authkeyVer_ = authkeyVer_;
-        result.cloudClientIp_ = cloudClientIp_;
+        result.signType_ = signType_;
         result.tag_ = tag_;
         result.regPlatform_ = regPlatform_;
         result.countryCode_ = countryCode_;
@@ -2282,7 +2282,7 @@ public final class GetPlayerTokenRspOuterClass {
         result.clientIpStr_ = clientIpStr_;
         result.sign_ = sign_;
         result.psnId_ = psnId_;
-        result.jLCDDOJGKKG_ = jLCDDOJGKKG_;
+        result.authAppid_ = authAppid_;
         onBuilt();
         return result;
       }
@@ -2413,14 +2413,14 @@ public final class GetPlayerTokenRspOuterClass {
         if (other.getIsLoginWhiteList() != false) {
           setIsLoginWhiteList(other.getIsLoginWhiteList());
         }
-        if (other.getSignType() != 0) {
-          setSignType(other.getSignType());
+        if (other.getRegMinorAge() != 0) {
+          setRegMinorAge(other.getRegMinorAge());
         }
         if (other.getAuthkeyVer() != 0) {
           setAuthkeyVer(other.getAuthkeyVer());
         }
-        if (other.getCloudClientIp() != 0) {
-          setCloudClientIp(other.getCloudClientIp());
+        if (other.getSignType() != 0) {
+          setSignType(other.getSignType());
         }
         if (other.getTag() != 0) {
           setTag(other.getTag());
@@ -2462,8 +2462,8 @@ public final class GetPlayerTokenRspOuterClass {
           psnId_ = other.psnId_;
           onChanged();
         }
-        if (!other.getJLCDDOJGKKG().isEmpty()) {
-          jLCDDOJGKKG_ = other.jLCDDOJGKKG_;
+        if (!other.getAuthAppid().isEmpty()) {
+          authAppid_ = other.authAppid_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -3680,33 +3680,33 @@ public final class GetPlayerTokenRspOuterClass {
         return this;
       }
 
-      private int signType_ ;
+      private int regMinorAge_ ;
       /**
-       * <code>uint32 sign_type = 576;</code>
-       * @return The signType.
+       * <code>uint32 reg_minor_age = 576;</code>
+       * @return The regMinorAge.
        */
       @java.lang.Override
-      public int getSignType() {
-        return signType_;
+      public int getRegMinorAge() {
+        return regMinorAge_;
       }
       /**
-       * <code>uint32 sign_type = 576;</code>
-       * @param value The signType to set.
+       * <code>uint32 reg_minor_age = 576;</code>
+       * @param value The regMinorAge to set.
        * @return This builder for chaining.
        */
-      public Builder setSignType(int value) {
+      public Builder setRegMinorAge(int value) {
         
-        signType_ = value;
+        regMinorAge_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 sign_type = 576;</code>
+       * <code>uint32 reg_minor_age = 576;</code>
        * @return This builder for chaining.
        */
-      public Builder clearSignType() {
+      public Builder clearRegMinorAge() {
         
-        signType_ = 0;
+        regMinorAge_ = 0;
         onChanged();
         return this;
       }
@@ -3742,33 +3742,33 @@ public final class GetPlayerTokenRspOuterClass {
         return this;
       }
 
-      private int cloudClientIp_ ;
+      private int signType_ ;
       /**
-       * <code>uint32 cloudClientIp = 847;</code>
-       * @return The cloudClientIp.
+       * <code>uint32 sign_type = 847;</code>
+       * @return The signType.
        */
       @java.lang.Override
-      public int getCloudClientIp() {
-        return cloudClientIp_;
+      public int getSignType() {
+        return signType_;
       }
       /**
-       * <code>uint32 cloudClientIp = 847;</code>
-       * @param value The cloudClientIp to set.
+       * <code>uint32 sign_type = 847;</code>
+       * @param value The signType to set.
        * @return This builder for chaining.
        */
-      public Builder setCloudClientIp(int value) {
+      public Builder setSignType(int value) {
         
-        cloudClientIp_ = value;
+        signType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 cloudClientIp = 847;</code>
+       * <code>uint32 sign_type = 847;</code>
        * @return This builder for chaining.
        */
-      public Builder clearCloudClientIp() {
+      public Builder clearSignType() {
         
-        cloudClientIp_ = 0;
+        signType_ = 0;
         onChanged();
         return this;
       }
@@ -4370,78 +4370,78 @@ public final class GetPlayerTokenRspOuterClass {
         return this;
       }
 
-      private java.lang.Object jLCDDOJGKKG_ = "";
+      private java.lang.Object authAppid_ = "";
       /**
-       * <code>string JLCDDOJGKKG = 2042;</code>
-       * @return The jLCDDOJGKKG.
+       * <code>string auth_appid = 2042;</code>
+       * @return The authAppid.
        */
-      public java.lang.String getJLCDDOJGKKG() {
-        java.lang.Object ref = jLCDDOJGKKG_;
+      public java.lang.String getAuthAppid() {
+        java.lang.Object ref = authAppid_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          jLCDDOJGKKG_ = s;
+          authAppid_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string JLCDDOJGKKG = 2042;</code>
-       * @return The bytes for jLCDDOJGKKG.
+       * <code>string auth_appid = 2042;</code>
+       * @return The bytes for authAppid.
        */
       public com.google.protobuf.ByteString
-          getJLCDDOJGKKGBytes() {
-        java.lang.Object ref = jLCDDOJGKKG_;
+          getAuthAppidBytes() {
+        java.lang.Object ref = authAppid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          jLCDDOJGKKG_ = b;
+          authAppid_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string JLCDDOJGKKG = 2042;</code>
-       * @param value The jLCDDOJGKKG to set.
+       * <code>string auth_appid = 2042;</code>
+       * @param value The authAppid to set.
        * @return This builder for chaining.
        */
-      public Builder setJLCDDOJGKKG(
+      public Builder setAuthAppid(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        jLCDDOJGKKG_ = value;
+        authAppid_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string JLCDDOJGKKG = 2042;</code>
+       * <code>string auth_appid = 2042;</code>
        * @return This builder for chaining.
        */
-      public Builder clearJLCDDOJGKKG() {
+      public Builder clearAuthAppid() {
         
-        jLCDDOJGKKG_ = getDefaultInstance().getJLCDDOJGKKG();
+        authAppid_ = getDefaultInstance().getAuthAppid();
         onChanged();
         return this;
       }
       /**
-       * <code>string JLCDDOJGKKG = 2042;</code>
-       * @param value The bytes for jLCDDOJGKKG to set.
+       * <code>string auth_appid = 2042;</code>
+       * @param value The bytes for authAppid to set.
        * @return This builder for chaining.
        */
-      public Builder setJLCDDOJGKKGBytes(
+      public Builder setAuthAppidBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        jLCDDOJGKKG_ = value;
+        authAppid_ = value;
         onChanged();
         return this;
       }
@@ -4513,7 +4513,7 @@ public final class GetPlayerTokenRspOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\027GetPlayerTokenRsp.proto\032\024StopServerInf" +
-      "o.proto\"\346\006\n\021GetPlayerTokenRsp\022\017\n\007retcode" +
+      "o.proto\"\345\006\n\021GetPlayerTokenRsp\022\017\n\007retcode" +
       "\030\001 \001(\005\022\027\n\017secret_key_seed\030\002 \001(\004\022\020\n\010is_gu" +
       "est\030\003 \001(\010\022\033\n\023security_cmd_buffer\030\004 \001(\014\022\034" +
       "\n\024is_proficient_player\030\005 \001(\010\022\023\n\013account_" +
@@ -4528,14 +4528,14 @@ public final class GetPlayerTokenRspOuterClass {
       "\"\n\031client_version_random_key\030\360\003 \001(\t\022\020\n\007a" +
       "uthkey\030\220\004 \001(\t\022%\n\013stop_server\030\263\004 \001(\0132\017.St" +
       "opServerInfo\022\034\n\023is_login_white_list\030\277\004 \001" +
-      "(\010\022\022\n\tsign_type\030\300\004 \001(\r\022\024\n\013authkey_ver\030\366\004" +
-      " \001(\r\022\026\n\rcloudClientIp\030\317\006 \001(\r\022\014\n\003tag\030\325\006 \001" +
+      "(\010\022\026\n\rreg_minor_age\030\300\004 \001(\r\022\024\n\013authkey_ve" +
+      "r\030\366\004 \001(\r\022\022\n\tsign_type\030\317\006 \001(\r\022\014\n\003tag\030\325\006 \001" +
       "(\r\022\025\n\014reg_platform\030\336\010 \001(\r\022\025\n\014country_cod" +
       "e\030\365\t \001(\t\022\021\n\010game_biz\030\206\r \001(\t\022\"\n\031finish_co" +
       "llection_id_list\030\224\r \003(\r\022\021\n\010birthday\030\307\r \001" +
       "(\t\022\026\n\rclient_ip_str\030\317\016 \001(\t\022\r\n\004sign\030\335\016 \001(" +
-      "\t\022\017\n\006psn_id\030\242\017 \001(\t\022\024\n\013JLCDDOJGKKG\030\372\017 \001(\t" +
-      "B\033\n\031raidengame.cache.protobufb\006proto3"
+      "\t\022\017\n\006psn_id\030\242\017 \001(\t\022\023\n\nauth_appid\030\372\017 \001(\tB" +
+      "\033\n\031raidengame.cache.protobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4547,7 +4547,7 @@ public final class GetPlayerTokenRspOuterClass {
     internal_static_GetPlayerTokenRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetPlayerTokenRsp_descriptor,
-        new java.lang.String[] { "Retcode", "SecretKeySeed", "IsGuest", "SecurityCmdBuffer", "IsProficientPlayer", "AccountUid", "BlackUidEndTime", "Uid", "ExtraBinData", "GmUid", "SecretKey", "AccountType", "PlatformType", "Msg", "Token", "ServerRandKey", "AKODFAIGJCE", "SubChannelId", "ChannelId", "KeyId", "IsWatchdogUid", "ClientVersionRandomKey", "Authkey", "StopServer", "IsLoginWhiteList", "SignType", "AuthkeyVer", "CloudClientIp", "Tag", "RegPlatform", "CountryCode", "GameBiz", "FinishCollectionIdList", "Birthday", "ClientIpStr", "Sign", "PsnId", "JLCDDOJGKKG", });
+        new java.lang.String[] { "Retcode", "SecretKeySeed", "IsGuest", "SecurityCmdBuffer", "IsProficientPlayer", "AccountUid", "BlackUidEndTime", "Uid", "ExtraBinData", "GmUid", "SecretKey", "AccountType", "PlatformType", "Msg", "Token", "ServerRandKey", "AKODFAIGJCE", "SubChannelId", "ChannelId", "KeyId", "IsWatchdogUid", "ClientVersionRandomKey", "Authkey", "StopServer", "IsLoginWhiteList", "RegMinorAge", "AuthkeyVer", "SignType", "Tag", "RegPlatform", "CountryCode", "GameBiz", "FinishCollectionIdList", "Birthday", "ClientIpStr", "Sign", "PsnId", "AuthAppid", });
     raidengame.cache.protobuf.StopServerInfoOuterClass.getDescriptor();
   }
 

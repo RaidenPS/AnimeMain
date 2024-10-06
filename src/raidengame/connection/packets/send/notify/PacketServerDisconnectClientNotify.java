@@ -14,7 +14,7 @@ public class PacketServerDisconnectClientNotify extends BasePacket {
         ServerDisconnectClientNotify proto =
                 ServerDisconnectClientNotify.newBuilder()
                     .setData(1)
-                    .build();
+                    .buildPartial();
 
         this.setData(proto);
     }
