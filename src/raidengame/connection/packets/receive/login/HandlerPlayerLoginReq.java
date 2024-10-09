@@ -5,6 +5,7 @@ import raidengame.configuration.*;
 import raidengame.connection.GameSession;
 import raidengame.connection.SessionState;
 import raidengame.connection.base.*;
+import raidengame.database.entities.GameLog;
 import raidengame.game.player.Player;
 
 // Packets
@@ -46,6 +47,12 @@ public class HandlerPlayerLoginReq extends Packet {
             // Outdated version
             session.send(new PacketPlayerLoginRsp(session, req, PacketRetcodes.RET_CLIENT_FORCE_UPDATE, "LOGIN_ANOTHER_GAME_VERSION"));
             return;
+        }
+
+        if(ConfigManager.serverConfig.gameInfo.isBeta) {
+            // logging only on beta versions. (fair)
+            GameLog log = new GameLog(session.getPlayer(), req, true);
+            log.save();
         }
 
         Player player = session.getPlayer();

@@ -19,6 +19,6 @@ public enum LanguageType {
                 return type;
             }
         }
-        throw new IllegalArgumentException("Unknown value: " + value);
+        return English;
     }
 }

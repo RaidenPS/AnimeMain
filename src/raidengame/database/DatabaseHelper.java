@@ -74,7 +74,7 @@ public final class DatabaseHelper {
      * @param account Account object
      */
     public static void saveAccount(Account account) {
-        DatabaseHelper.saveAccountAsync(account);
+        DatabaseHelper.saveGameAsync(account);
     }
 
     /**
@@ -109,15 +109,6 @@ public final class DatabaseHelper {
     public static synchronized void generatePlayerUid(Player player, int reservedId) {
         player.setId(getNextPlayerId(reservedId));
         DatabaseHelper.saveGameAsync(player);
-    }
-
-    /**
-     * Saves an object on the account datastore.
-     *
-     * @param object The object to save.
-     */
-    public static void saveAccountAsync(Object object) {
-        DatabaseHelper.eventExecutor.submit(() -> DatabaseManager.getGameDatastore().save(object));
     }
 
     /**

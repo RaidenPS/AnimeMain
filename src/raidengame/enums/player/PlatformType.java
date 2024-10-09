@@ -5,15 +5,23 @@ public enum PlatformType {
     IOS(1),
     Android(2),
     PC(3),
-    WEB(4),
-    WAP(5),
-    PS4(6),
-    CLOUD_ANDROID(8),
-    CLOUD_PC(9),
-    CLOUD_IOS(10),
-    PS5(11),
-    MACOS(12),
-    CLOUD_MACOS(13);
+    PS4(4),
+    SERVER(5),
+    CLOUD_ANDROID(6),
+    CLOUD_IOS(7),
+    PS5(8),
+    CLOUD_WEB(9),
+    CLOUD_TV(10),
+    CLOUD_MAC(11),
+    CLOUD_PC(12),
+    CLOUD_THIRD_PARTY_MOBILE(13),
+    CLOUD_THIRD_PARTY_PC(14),
+    CLOUD_WEB_ANDROID(15),
+    CLOUD_WEB_IOS(16),
+    CLOUD_WEB_PC(17),
+    CLOUD_WEB_MAC(18),
+    CLOUD_WEB_TOUCH(19),
+    CLOUD_WEB_KEYBOARD(20);
 
     private final int value;
     PlatformType(int value) {
@@ -30,6 +38,6 @@ public enum PlatformType {
                 return type;
             }
         }
-        throw new IllegalArgumentException("Unknown value: " + value);
+        return PC;
     }
 }

@@ -54,7 +54,7 @@ public final class DatabaseManager {
         try {
             return counter.getNextId();
         } finally {
-            DatabaseHelper.saveAccountAsync(counter);
+            DatabaseHelper.saveGameAsync(counter);
         }
     }
 

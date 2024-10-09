@@ -1,6 +1,7 @@
 package raidengame.enums.player;
 
 public enum ChannelType {
+    NONE(0),
     Default(1),
     Xiaomi(11),
     Coolpad(12),
@@ -32,6 +33,6 @@ public enum ChannelType {
                 return type;
             }
         }
-        throw new IllegalArgumentException("Unknown value: " + value);
+        return Default;
     }
 }

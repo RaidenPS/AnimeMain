@@ -7,6 +7,7 @@ import raidengame.connection.base.*;
 import raidengame.game.player.Player;
 
 // Packets
+import raidengame.connection.packets.send.notify.PacketPlayerKickNotify;
 import raidengame.connection.packets.send.PacketSetPlayerBornDataRsp;
 
 // Protocol buffers
@@ -56,7 +57,9 @@ public class HandlerSetPlayerBornDataReq extends Packet {
             session.getPlayer().onLogin(true);
         }
         else {
-            /// TODO: Implement kick packet.
+            session.getAccount().setSuspended(true);
+            session.getAccount().saveAccount();
+            session.send(new PacketPlayerKickNotify());
         }
     }
 }

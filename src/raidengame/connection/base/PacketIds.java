@@ -25,5 +25,6 @@ public final class PacketIds {
 
     // Notifies
     public static final int DoSetPlayerBornDataNotify = 5351;
+    public static final int PlayerKickNotify = 1368;
     public static final int ServerDisconnectClientNotify = 1387;
 }
