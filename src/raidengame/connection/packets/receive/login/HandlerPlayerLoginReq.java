@@ -12,6 +12,7 @@ import raidengame.connection.packets.send.login.PacketPlayerLoginRsp;
 
 // Protocol buffers
 import raidengame.cache.protobuf.PlayerLoginReqOuterClass.PlayerLoginReq;
+import raidengame.misc.classes.Randomizer;
 
 @PacketOpcode(PacketIds.PlayerLoginReq)
 public class HandlerPlayerLoginReq extends Packet {
@@ -35,6 +36,12 @@ public class HandlerPlayerLoginReq extends Packet {
             return;
         }
 
+        if(ConfigManager.serverConfig.isMaintenance) {
+            // The server is under maintenance.
+            session.send(new PacketPlayerLoginRsp(session));
+            return;
+        }
+
         if(!req.getClientVersion().equals(ConfigManager.serverConfig.gameInfo.rawVersion)) {
             // Outdated version
             session.send(new PacketPlayerLoginRsp(session, req, PacketRetcodes.RET_CLIENT_FORCE_UPDATE, "LOGIN_ANOTHER_GAME_VERSION"));
@@ -48,8 +55,11 @@ public class HandlerPlayerLoginReq extends Packet {
                 session.send(new BasePacket(PacketIds.DoSetPlayerBornDataNotify));
             }
             else {
-                /// TODO: Give player's default character by using 50%/50%.
+                int avatarId = (Randomizer.randomRange(1, 2) == 2) ? GameConstants.MAIN_CHARACTER_MALE : GameConstants.MAIN_CHARACTER_FEMALE;
+                player.addAvatar(avatarId, true, false);
+                player.saveDatabase();
             }
+            player.onLogin(true);
         }
         else {
             player.onLogin(false);

@@ -26,4 +26,10 @@ public final class PacketRetcodes {
     public static final int RET_MINOR_REGISTER_FOBIDDEN = 41;
     public static final int RET_SECURITY_LIBRARY_ERROR = 42;
     public static final int RET_GATE_TICKET_CHECK_ERROR = 43;
+
+    public static final int RET_NICKNAME_UTF_8_ERROR = 130;
+    public static final int RET_NICKNAME_TOO_LONG = 131;
+    public static final int RET_NICKNAME_WORD_ILLEGAL = 132;
+    public static final int RET_NICKNAME_TOO_MANY_DIGITS = 133;
+    public static final int RET_NICKNAME_IS_EMPTY = 134;
 }

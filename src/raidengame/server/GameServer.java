@@ -1,6 +1,7 @@
 package raidengame.server;
 
 // Imports
+import raidengame.Main;
 import raidengame.configuration.ConfigManager;
 import raidengame.connection.SessionManager;
 import raidengame.connection.PacketHandler;

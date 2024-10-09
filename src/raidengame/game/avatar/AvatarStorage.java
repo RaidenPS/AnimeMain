@@ -17,4 +17,8 @@ public class AvatarStorage implements Iterable<Avatar> {
     public Iterator<Avatar> iterator() {
         return null;
     }
+
+    public boolean addAvatar(Avatar character) {
+        return false;
+    }
 }

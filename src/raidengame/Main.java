@@ -5,6 +5,7 @@ import raidengame.configuration.ConfigManager;
 import raidengame.connection.Encryption;
 import raidengame.database.DatabaseManager;
 import raidengame.misc.CustomLogger;
+import raidengame.misc.WordFilter;
 import raidengame.server.GameServer;
 import lombok.Getter;
 import org.reflections.Reflections;
@@ -18,6 +19,7 @@ public class Main {
         ConfigManager.loadConfig();
         Encryption.loadCryptoKeys();
         DatabaseManager.initialize();
+        WordFilter.loadWordFilter();
 
         gameServer = new GameServer();
     }

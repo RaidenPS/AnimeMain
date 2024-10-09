@@ -62,15 +62,42 @@ public class Account {
         this.permissions = new ArrayList<>();
     }
 
+    /**
+     * Checks if a player is currently banned.
+     * @return value (boolean)
+     */
+    public boolean isBanned() {
+        if (banEndTime > 0 && banEndTime < System.currentTimeMillis() / 1000) {
+            this.isBanned = false;
+            this.banEndTime = 0;
+            this.banStartTime = 0;
+            this.banReason = null;
+            this.saveAccount();
+        }
+        return isBanned;
+    }
+
+    /**
+     * Adds a permission.
+     * @param permission The given permission.
+     */
     public void addPermission(String permission) {
         if (this.permissions.contains(permission)) return;
         this.permissions.add(permission);
     }
 
+    /**
+     * Clears all permissions.
+     */
     public void clearPermission() {
         this.permissions.clear();
     }
 
+    /**
+     * Checks if this account have the permission.
+     * @param permission The given permission
+     * @return yes or no.
+     */
     public boolean hasPermission(String permission) {
         if (this.permissions == null) return false;
         if (this.permissions.contains("*") && this.permissions.size() == 1) return true;
@@ -78,28 +105,28 @@ public class Account {
         return permissions.contains(permission);
     }
 
+    /**
+     * Removes any permission.
+     * @param permission The given permission
+     */
     public void removePermission(String permission) {
         if(!this.hasPermission(permission)) return;
         this.permissions.remove(permission);
     }
 
-    public boolean isBanned() {
-        if (banEndTime > 0 && banEndTime < System.currentTimeMillis() / 1000) {
-            this.isBanned = false;
-            this.banEndTime = 0;
-            this.banStartTime = 0;
-            this.banReason = null;
-            this.save();
-        }
-        return isBanned;
-    }
-
+    /**
+     * Sets the reactivation process.
+     * @param reactivate_account value (boolean)
+     */
     public void setReactivateAccount(boolean reactivate_account) {
         this.needReactivation = reactivate_account;
         this.reactivateTicket = (reactivate_account ?  Randomizer.generateActionToken(15) : "");
     }
 
-    public void save() {
+    /**
+     * Saves the account database.
+     */
+    public void saveAccount() {
         DatabaseHelper.saveAccount(this);
     }
 }

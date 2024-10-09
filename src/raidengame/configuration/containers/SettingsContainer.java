@@ -16,7 +16,7 @@ public class SettingsContainer {
 
     public static class KCPInfo {
         public int kcpInterval = 3;
-        public int kcpTimeout = 1000 * 5; // 30 seconds.
+        public int kcpTimeout = 1000 * 30; // 30 seconds.
         public int kcpMtu = 1400;
         public int kcpSndwnd = 256;
         public int kcpRcvwnd = 256;

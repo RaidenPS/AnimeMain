@@ -63,56 +63,63 @@ public class PacketPlayerLoginRsp extends BasePacket {
     }
 
     /**
-     * Send PlayerLoginRsp packet. <b>RETCODE_SUCC or RET_GAME_UNDER_MAINTENANCE</b>, #UNFINISHED
+     * Send PlayerLoginRsp packet. <b>RETCODE_SUCC</b>
      */
     public PacketPlayerLoginRsp(GameSession session, PlayerLoginReq req) {
         super(PacketIds.PlayerLoginRsp);
 
-        PlayerLoginRsp proto;
-        if(ConfigManager.serverConfig.isMaintenance) {
-            // The game server is under maintenance.
-            proto =
-                PlayerLoginRsp.newBuilder()
-                        .setRetcode(PacketRetcodes.RET_GAME_UNDER_MAINTENANCE)
-                        .setMsg("Under Maintenance")
-                        .setStopServer(StopServerInfo.newBuilder()
-                                .setStopBeginTime(ConfigManager.serverConfig.maintenance.start_time)
-                                .setStopEndTime(ConfigManager.serverConfig.maintenance.end_time)
-                                .setContentMsg(ConfigManager.serverConfig.maintenance.message)
-                                .setUrl(ConfigManager.serverConfig.maintenance.url)
-                                .buildPartial())
-                        .build();
-        }
-        else {
-            RegionInfo regionInfo = this.retrieveRegionInformation(session.getAccount().getGameBiz());
+        RegionInfo regionInfo = this.retrieveRegionInformation(session.getAccount().getGameBiz());
 
-            // Send the login packet.
-            proto =
-                PlayerLoginRsp.newBuilder()
-                        .setRetcode(PacketRetcodes.RETCODE_SUCC)
-                        .setGameBiz(session.getAccount().getGameBiz())
-                        .setBirthday(req.getBirthday())
-                        .setIsTransfer(req.getIsTransfer())
-                        .setRegisterCps(req.getCps())
-                        .setCountryCode(req.getCountryCode())
-                        .setIsScOpen(true)
-                        .setScInfo(ByteString.copyFrom(new byte[] {}))
-                        .setRegisterCps(req.getCps())
-                        .setIsUseAbilityHash(false)
-                        //.setAbilityHashCode(1844674)
-                        .setIsEnableClientHashDebug(true)
-                        .setClientDataVersion(regionInfo.getClientDataVersion())
-                        .setClientMd5(regionInfo.getClientDataMd5())
-                        .setClientSilenceDataVersion(regionInfo.getClientSilenceDataVersion())
-                        .setClientSilenceMd5(regionInfo.getClientSilenceDataMd5())
-                        .setClientSilenceVersionSuffix(regionInfo.getClientSilenceVersionSuffix())
-                        .setClientVersionSuffix(regionInfo.getClientVersionSuffix())
-                        .setNextResourceUrl(regionInfo.getNextResourceUrl())
-                        .setResVersionConfig(regionInfo.getResVersionConfig())
-                        .setNextResVersionConfig(regionInfo.getNextResVersionConfig())
-                        .setPlayerDataVersion(req.getClientDataVersion())
-                        .build();
-        }
+        // Send the login packet.
+        PlayerLoginRsp proto =
+            PlayerLoginRsp.newBuilder()
+                    .setRetcode(PacketRetcodes.RETCODE_SUCC)
+                    .setGameBiz(session.getAccount().getGameBiz())
+                    .setBirthday(req.getBirthday())
+                    .setIsTransfer(req.getIsTransfer())
+                    .setRegisterCps(req.getCps())
+                    .setCountryCode(req.getCountryCode())
+                    .setIsScOpen(true)
+                    .setScInfo(ByteString.copyFrom(new byte[] {}))
+                    .setRegisterCps(req.getCps())
+                    .setIsUseAbilityHash(false)
+                    //.setAbilityHashCode(1844674)
+                    .setIsEnableClientHashDebug(true)
+                    .setClientDataVersion(regionInfo.getClientDataVersion())
+                    .setClientMd5(regionInfo.getClientDataMd5())
+                    .setClientSilenceDataVersion(regionInfo.getClientSilenceDataVersion())
+                    .setClientSilenceMd5(regionInfo.getClientSilenceDataMd5())
+                    .setClientSilenceVersionSuffix(regionInfo.getClientSilenceVersionSuffix())
+                    .setClientVersionSuffix(regionInfo.getClientVersionSuffix())
+                    .setNextResourceUrl(regionInfo.getNextResourceUrl())
+                    .setResVersionConfig(regionInfo.getResVersionConfig())
+                    .setNextResVersionConfig(regionInfo.getNextResVersionConfig())
+                    .setPlayerDataVersion(req.getClientDataVersion())
+                    .build();
+
+        this.setData(proto);
+    }
+
+    /**
+     * Send PlayerLoginRsp packet. <b>RET_GAME_UNDER_MAINTENANCE</b>
+     */
+    public PacketPlayerLoginRsp(GameSession session) {
+        super(PacketIds.PlayerLoginRsp);
+
+        session.setState(SessionState.INACTIVE);
+        PlayerLoginRsp proto =
+            PlayerLoginRsp.newBuilder()
+                    .setRetcode(PacketRetcodes.RET_GAME_UNDER_MAINTENANCE)
+                    .setMsg("Under Maintenance")
+                    .setIsScOpen(false)
+                    .setStopServer(StopServerInfo.newBuilder()
+                            .setStopBeginTime(ConfigManager.serverConfig.maintenance.start_time)
+                            .setStopEndTime(ConfigManager.serverConfig.maintenance.end_time)
+                            .setContentMsg(ConfigManager.serverConfig.maintenance.message)
+                            .setUrl(ConfigManager.serverConfig.maintenance.url)
+                            .buildPartial())
+                    .build();
+
         this.setData(proto);
     }
 
