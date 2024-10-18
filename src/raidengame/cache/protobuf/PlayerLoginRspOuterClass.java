@@ -176,10 +176,10 @@ public final class PlayerLoginRspOuterClass {
     raidengame.cache.protobuf.ResVersionConfigOuterClass.ResVersionConfigOrBuilder getResVersionConfigOrBuilder();
 
     /**
-     * <code>bool is_enable_client_hash_debug = 179;</code>
-     * @return The isEnableClientHashDebug.
+     * <code>bool KLLPFNOLBHO = 179;</code>
+     * @return The kLLPFNOLBHO.
      */
-    boolean getIsEnableClientHashDebug();
+    boolean getKLLPFNOLBHO();
 
     /**
      * <code>string client_silence_md5 = 249;</code>
@@ -218,10 +218,10 @@ public final class PlayerLoginRspOuterClass {
         int index);
 
     /**
-     * <code>bool is_editor = 451;</code>
-     * @return The isEditor.
+     * <code>bool is_enable_client_hash_debug = 451;</code>
+     * @return The isEnableClientHashDebug.
      */
-    boolean getIsEditor();
+    boolean getIsEnableClientHashDebug();
 
     /**
      * <code>bytes sc_info = 793;</code>
@@ -248,10 +248,10 @@ public final class PlayerLoginRspOuterClass {
     int getTargetHomeOwnerUid();
 
     /**
-     * <code>bool is_use_ability_hash = 1189;</code>
-     * @return The isUseAbilityHash.
+     * <code>bool JAGELBDJFJH = 1189;</code>
+     * @return The jAGELBDJFJH.
      */
-    boolean getIsUseAbilityHash();
+    boolean getJAGELBDJFJH();
 
     /**
      * <code>string msg = 1207;</code>
@@ -317,16 +317,16 @@ public final class PlayerLoginRspOuterClass {
         getNextResourceUrlBytes();
 
     /**
-     * <code>string register_cps = 1594;</code>
-     * @return The registerCps.
+     * <code>string client_md5 = 1594;</code>
+     * @return The clientMd5.
      */
-    java.lang.String getRegisterCps();
+    java.lang.String getClientMd5();
     /**
-     * <code>string register_cps = 1594;</code>
-     * @return The bytes for registerCps.
+     * <code>string client_md5 = 1594;</code>
+     * @return The bytes for clientMd5.
      */
     com.google.protobuf.ByteString
-        getRegisterCpsBytes();
+        getClientMd5Bytes();
 
     /**
      * <code>map&lt;uint32, .BlockInfo&gt; block_info_map = 1596;</code>
@@ -377,16 +377,16 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         getBirthdayBytes();
 
     /**
-     * <code>string client_md5 = 1728;</code>
-     * @return The clientMd5.
+     * <code>string register_cps = 1728;</code>
+     * @return The registerCps.
      */
-    java.lang.String getClientMd5();
+    java.lang.String getRegisterCps();
     /**
-     * <code>string client_md5 = 1728;</code>
-     * @return The bytes for clientMd5.
+     * <code>string register_cps = 1728;</code>
+     * @return The bytes for registerCps.
      */
     com.google.protobuf.ByteString
-        getClientMd5Bytes();
+        getRegisterCpsBytes();
 
     /**
      * <code>bool is_data_need_relogin = 1869;</code>
@@ -449,9 +449,9 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       msg_ = "";
       clientVersionSuffix_ = "";
       nextResourceUrl_ = "";
-      registerCps_ = "";
-      birthday_ = "";
       clientMd5_ = "";
+      birthday_ = "";
+      registerCps_ = "";
       countryCode_ = "";
     }
 
@@ -589,7 +589,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             }
             case 1432: {
 
-              isEnableClientHashDebug_ = input.readBool();
+              kLLPFNOLBHO_ = input.readBool();
               break;
             }
             case 1994: {
@@ -609,7 +609,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             }
             case 3608: {
 
-              isEditor_ = input.readBool();
+              isEnableClientHashDebug_ = input.readBool();
               break;
             }
             case 6346: {
@@ -630,7 +630,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             }
             case 9512: {
 
-              isUseAbilityHash_ = input.readBool();
+              jAGELBDJFJH_ = input.readBool();
               break;
             }
             case 9658: {
@@ -677,7 +677,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             case 12754: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              registerCps_ = s;
+              clientMd5_ = s;
               break;
             }
             case 12770: {
@@ -702,7 +702,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             case 13826: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              clientMd5_ = s;
+              registerCps_ = s;
               break;
             }
             case 14952: {
@@ -1100,15 +1100,15 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       return getResVersionConfig();
     }
 
-    public static final int IS_ENABLE_CLIENT_HASH_DEBUG_FIELD_NUMBER = 179;
-    private boolean isEnableClientHashDebug_;
+    public static final int KLLPFNOLBHO_FIELD_NUMBER = 179;
+    private boolean kLLPFNOLBHO_;
     /**
-     * <code>bool is_enable_client_hash_debug = 179;</code>
-     * @return The isEnableClientHashDebug.
+     * <code>bool KLLPFNOLBHO = 179;</code>
+     * @return The kLLPFNOLBHO.
      */
     @java.lang.Override
-    public boolean getIsEnableClientHashDebug() {
-      return isEnableClientHashDebug_;
+    public boolean getKLLPFNOLBHO() {
+      return kLLPFNOLBHO_;
     }
 
     public static final int CLIENT_SILENCE_MD5_FIELD_NUMBER = 249;
@@ -1189,15 +1189,15 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       return featureBlockInfoList_.get(index);
     }
 
-    public static final int IS_EDITOR_FIELD_NUMBER = 451;
-    private boolean isEditor_;
+    public static final int IS_ENABLE_CLIENT_HASH_DEBUG_FIELD_NUMBER = 451;
+    private boolean isEnableClientHashDebug_;
     /**
-     * <code>bool is_editor = 451;</code>
-     * @return The isEditor.
+     * <code>bool is_enable_client_hash_debug = 451;</code>
+     * @return The isEnableClientHashDebug.
      */
     @java.lang.Override
-    public boolean getIsEditor() {
-      return isEditor_;
+    public boolean getIsEnableClientHashDebug() {
+      return isEnableClientHashDebug_;
     }
 
     public static final int SC_INFO_FIELD_NUMBER = 793;
@@ -1260,15 +1260,15 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       return targetHomeOwnerUid_;
     }
 
-    public static final int IS_USE_ABILITY_HASH_FIELD_NUMBER = 1189;
-    private boolean isUseAbilityHash_;
+    public static final int JAGELBDJFJH_FIELD_NUMBER = 1189;
+    private boolean jAGELBDJFJH_;
     /**
-     * <code>bool is_use_ability_hash = 1189;</code>
-     * @return The isUseAbilityHash.
+     * <code>bool JAGELBDJFJH = 1189;</code>
+     * @return The jAGELBDJFJH.
      */
     @java.lang.Override
-    public boolean getIsUseAbilityHash() {
-      return isUseAbilityHash_;
+    public boolean getJAGELBDJFJH() {
+      return jAGELBDJFJH_;
     }
 
     public static final int MSG_FIELD_NUMBER = 1207;
@@ -1433,38 +1433,38 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       }
     }
 
-    public static final int REGISTER_CPS_FIELD_NUMBER = 1594;
-    private volatile java.lang.Object registerCps_;
+    public static final int CLIENT_MD5_FIELD_NUMBER = 1594;
+    private volatile java.lang.Object clientMd5_;
     /**
-     * <code>string register_cps = 1594;</code>
-     * @return The registerCps.
+     * <code>string client_md5 = 1594;</code>
+     * @return The clientMd5.
      */
     @java.lang.Override
-    public java.lang.String getRegisterCps() {
-      java.lang.Object ref = registerCps_;
+    public java.lang.String getClientMd5() {
+      java.lang.Object ref = clientMd5_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        registerCps_ = s;
+        clientMd5_ = s;
         return s;
       }
     }
     /**
-     * <code>string register_cps = 1594;</code>
-     * @return The bytes for registerCps.
+     * <code>string client_md5 = 1594;</code>
+     * @return The bytes for clientMd5.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getRegisterCpsBytes() {
-      java.lang.Object ref = registerCps_;
+        getClientMd5Bytes() {
+      java.lang.Object ref = clientMd5_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        registerCps_ = b;
+        clientMd5_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1590,38 +1590,38 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       }
     }
 
-    public static final int CLIENT_MD5_FIELD_NUMBER = 1728;
-    private volatile java.lang.Object clientMd5_;
+    public static final int REGISTER_CPS_FIELD_NUMBER = 1728;
+    private volatile java.lang.Object registerCps_;
     /**
-     * <code>string client_md5 = 1728;</code>
-     * @return The clientMd5.
+     * <code>string register_cps = 1728;</code>
+     * @return The registerCps.
      */
     @java.lang.Override
-    public java.lang.String getClientMd5() {
-      java.lang.Object ref = clientMd5_;
+    public java.lang.String getRegisterCps() {
+      java.lang.Object ref = registerCps_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        clientMd5_ = s;
+        registerCps_ = s;
         return s;
       }
     }
     /**
-     * <code>string client_md5 = 1728;</code>
-     * @return The bytes for clientMd5.
+     * <code>string register_cps = 1728;</code>
+     * @return The bytes for registerCps.
      */
     @java.lang.Override
     public com.google.protobuf.ByteString
-        getClientMd5Bytes() {
-      java.lang.Object ref = clientMd5_;
+        getRegisterCpsBytes() {
+      java.lang.Object ref = registerCps_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        clientMd5_ = b;
+        registerCps_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1768,8 +1768,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (resVersionConfig_ != null) {
         output.writeMessage(113, getResVersionConfig());
       }
-      if (isEnableClientHashDebug_ != false) {
-        output.writeBool(179, isEnableClientHashDebug_);
+      if (kLLPFNOLBHO_ != false) {
+        output.writeBool(179, kLLPFNOLBHO_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSilenceMd5_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 249, clientSilenceMd5_);
@@ -1777,8 +1777,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       for (int i = 0; i < featureBlockInfoList_.size(); i++) {
         output.writeMessage(336, featureBlockInfoList_.get(i));
       }
-      if (isEditor_ != false) {
-        output.writeBool(451, isEditor_);
+      if (isEnableClientHashDebug_ != false) {
+        output.writeBool(451, isEnableClientHashDebug_);
       }
       if (!scInfo_.isEmpty()) {
         output.writeBytes(793, scInfo_);
@@ -1789,8 +1789,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (targetHomeOwnerUid_ != 0) {
         output.writeUInt32(1147, targetHomeOwnerUid_);
       }
-      if (isUseAbilityHash_ != false) {
-        output.writeBool(1189, isUseAbilityHash_);
+      if (jAGELBDJFJH_ != false) {
+        output.writeBool(1189, jAGELBDJFJH_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1207, msg_);
@@ -1810,8 +1810,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextResourceUrl_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1549, nextResourceUrl_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerCps_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1594, registerCps_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientMd5_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1594, clientMd5_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
@@ -1822,8 +1822,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(birthday_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1689, birthday_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientMd5_)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1728, clientMd5_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerCps_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1728, registerCps_);
       }
       if (isDataNeedRelogin_ != false) {
         output.writeBool(1869, isDataNeedRelogin_);
@@ -1912,9 +1912,9 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(113, getResVersionConfig());
       }
-      if (isEnableClientHashDebug_ != false) {
+      if (kLLPFNOLBHO_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(179, isEnableClientHashDebug_);
+          .computeBoolSize(179, kLLPFNOLBHO_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientSilenceMd5_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(249, clientSilenceMd5_);
@@ -1923,9 +1923,9 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(336, featureBlockInfoList_.get(i));
       }
-      if (isEditor_ != false) {
+      if (isEnableClientHashDebug_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(451, isEditor_);
+          .computeBoolSize(451, isEnableClientHashDebug_);
       }
       if (!scInfo_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
@@ -1938,9 +1938,9 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1147, targetHomeOwnerUid_);
       }
-      if (isUseAbilityHash_ != false) {
+      if (jAGELBDJFJH_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1189, isUseAbilityHash_);
+          .computeBoolSize(1189, jAGELBDJFJH_);
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(msg_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1207, msg_);
@@ -1963,8 +1963,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(nextResourceUrl_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1549, nextResourceUrl_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerCps_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1594, registerCps_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientMd5_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1594, clientMd5_);
       }
       for (java.util.Map.Entry<java.lang.Integer, raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo> entry
            : internalGetBlockInfoMap().getMap().entrySet()) {
@@ -1979,8 +1979,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(birthday_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1689, birthday_);
       }
-      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientMd5_)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1728, clientMd5_);
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(registerCps_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1728, registerCps_);
       }
       if (isDataNeedRelogin_ != false) {
         size += com.google.protobuf.CodedOutputStream
@@ -2043,22 +2043,22 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         if (!getResVersionConfig()
             .equals(other.getResVersionConfig())) return false;
       }
-      if (getIsEnableClientHashDebug()
-          != other.getIsEnableClientHashDebug()) return false;
+      if (getKLLPFNOLBHO()
+          != other.getKLLPFNOLBHO()) return false;
       if (!getClientSilenceMd5()
           .equals(other.getClientSilenceMd5())) return false;
       if (!getFeatureBlockInfoListList()
           .equals(other.getFeatureBlockInfoListList())) return false;
-      if (getIsEditor()
-          != other.getIsEditor()) return false;
+      if (getIsEnableClientHashDebug()
+          != other.getIsEnableClientHashDebug()) return false;
       if (!getScInfo()
           .equals(other.getScInfo())) return false;
       if (!getClientSilenceVersionSuffix()
           .equals(other.getClientSilenceVersionSuffix())) return false;
       if (getTargetHomeOwnerUid()
           != other.getTargetHomeOwnerUid()) return false;
-      if (getIsUseAbilityHash()
-          != other.getIsUseAbilityHash()) return false;
+      if (getJAGELBDJFJH()
+          != other.getJAGELBDJFJH()) return false;
       if (!getMsg()
           .equals(other.getMsg())) return false;
       if (getIsScOpen()
@@ -2075,14 +2075,14 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       }
       if (!getNextResourceUrl()
           .equals(other.getNextResourceUrl())) return false;
-      if (!getRegisterCps()
-          .equals(other.getRegisterCps())) return false;
+      if (!getClientMd5()
+          .equals(other.getClientMd5())) return false;
       if (!internalGetBlockInfoMap().equals(
           other.internalGetBlockInfoMap())) return false;
       if (!getBirthday()
           .equals(other.getBirthday())) return false;
-      if (!getClientMd5()
-          .equals(other.getClientMd5())) return false;
+      if (!getRegisterCps()
+          .equals(other.getRegisterCps())) return false;
       if (getIsDataNeedRelogin()
           != other.getIsDataNeedRelogin()) return false;
       if (!getCountryCode()
@@ -2146,27 +2146,27 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         hash = (37 * hash) + RES_VERSION_CONFIG_FIELD_NUMBER;
         hash = (53 * hash) + getResVersionConfig().hashCode();
       }
-      hash = (37 * hash) + IS_ENABLE_CLIENT_HASH_DEBUG_FIELD_NUMBER;
+      hash = (37 * hash) + KLLPFNOLBHO_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsEnableClientHashDebug());
+          getKLLPFNOLBHO());
       hash = (37 * hash) + CLIENT_SILENCE_MD5_FIELD_NUMBER;
       hash = (53 * hash) + getClientSilenceMd5().hashCode();
       if (getFeatureBlockInfoListCount() > 0) {
         hash = (37 * hash) + FEATURE_BLOCK_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFeatureBlockInfoListList().hashCode();
       }
-      hash = (37 * hash) + IS_EDITOR_FIELD_NUMBER;
+      hash = (37 * hash) + IS_ENABLE_CLIENT_HASH_DEBUG_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsEditor());
+          getIsEnableClientHashDebug());
       hash = (37 * hash) + SC_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getScInfo().hashCode();
       hash = (37 * hash) + CLIENT_SILENCE_VERSION_SUFFIX_FIELD_NUMBER;
       hash = (53 * hash) + getClientSilenceVersionSuffix().hashCode();
       hash = (37 * hash) + TARGET_HOME_OWNER_UID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetHomeOwnerUid();
-      hash = (37 * hash) + IS_USE_ABILITY_HASH_FIELD_NUMBER;
+      hash = (37 * hash) + JAGELBDJFJH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsUseAbilityHash());
+          getJAGELBDJFJH());
       hash = (37 * hash) + MSG_FIELD_NUMBER;
       hash = (53 * hash) + getMsg().hashCode();
       hash = (37 * hash) + IS_SC_OPEN_FIELD_NUMBER;
@@ -2183,16 +2183,16 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       }
       hash = (37 * hash) + NEXT_RESOURCE_URL_FIELD_NUMBER;
       hash = (53 * hash) + getNextResourceUrl().hashCode();
-      hash = (37 * hash) + REGISTER_CPS_FIELD_NUMBER;
-      hash = (53 * hash) + getRegisterCps().hashCode();
+      hash = (37 * hash) + CLIENT_MD5_FIELD_NUMBER;
+      hash = (53 * hash) + getClientMd5().hashCode();
       if (!internalGetBlockInfoMap().getMap().isEmpty()) {
         hash = (37 * hash) + BLOCK_INFO_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetBlockInfoMap().hashCode();
       }
       hash = (37 * hash) + BIRTHDAY_FIELD_NUMBER;
       hash = (53 * hash) + getBirthday().hashCode();
-      hash = (37 * hash) + CLIENT_MD5_FIELD_NUMBER;
-      hash = (53 * hash) + getClientMd5().hashCode();
+      hash = (37 * hash) + REGISTER_CPS_FIELD_NUMBER;
+      hash = (53 * hash) + getRegisterCps().hashCode();
       hash = (37 * hash) + IS_DATA_NEED_RELOGIN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsDataNeedRelogin());
@@ -2407,7 +2407,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
           resVersionConfig_ = null;
           resVersionConfigBuilder_ = null;
         }
-        isEnableClientHashDebug_ = false;
+        kLLPFNOLBHO_ = false;
 
         clientSilenceMd5_ = "";
 
@@ -2417,7 +2417,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         } else {
           featureBlockInfoListBuilder_.clear();
         }
-        isEditor_ = false;
+        isEnableClientHashDebug_ = false;
 
         scInfo_ = com.google.protobuf.ByteString.EMPTY;
 
@@ -2425,7 +2425,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
 
         targetHomeOwnerUid_ = 0;
 
-        isUseAbilityHash_ = false;
+        jAGELBDJFJH_ = false;
 
         msg_ = "";
 
@@ -2443,12 +2443,12 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         }
         nextResourceUrl_ = "";
 
-        registerCps_ = "";
+        clientMd5_ = "";
 
         internalGetMutableBlockInfoMap().clear();
         birthday_ = "";
 
-        clientMd5_ = "";
+        registerCps_ = "";
 
         isDataNeedRelogin_ = false;
 
@@ -2516,7 +2516,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         } else {
           result.resVersionConfig_ = resVersionConfigBuilder_.build();
         }
-        result.isEnableClientHashDebug_ = isEnableClientHashDebug_;
+        result.kLLPFNOLBHO_ = kLLPFNOLBHO_;
         result.clientSilenceMd5_ = clientSilenceMd5_;
         if (featureBlockInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000004) != 0)) {
@@ -2527,11 +2527,11 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         } else {
           result.featureBlockInfoList_ = featureBlockInfoListBuilder_.build();
         }
-        result.isEditor_ = isEditor_;
+        result.isEnableClientHashDebug_ = isEnableClientHashDebug_;
         result.scInfo_ = scInfo_;
         result.clientSilenceVersionSuffix_ = clientSilenceVersionSuffix_;
         result.targetHomeOwnerUid_ = targetHomeOwnerUid_;
-        result.isUseAbilityHash_ = isUseAbilityHash_;
+        result.jAGELBDJFJH_ = jAGELBDJFJH_;
         result.msg_ = msg_;
         result.isScOpen_ = isScOpen_;
         result.totalTickTime_ = totalTickTime_;
@@ -2542,11 +2542,11 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
           result.stopServer_ = stopServerBuilder_.build();
         }
         result.nextResourceUrl_ = nextResourceUrl_;
-        result.registerCps_ = registerCps_;
+        result.clientMd5_ = clientMd5_;
         result.blockInfoMap_ = internalGetBlockInfoMap();
         result.blockInfoMap_.makeImmutable();
         result.birthday_ = birthday_;
-        result.clientMd5_ = clientMd5_;
+        result.registerCps_ = registerCps_;
         result.isDataNeedRelogin_ = isDataNeedRelogin_;
         result.countryCode_ = countryCode_;
         if (nextResVersionConfigBuilder_ == null) {
@@ -2673,8 +2673,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         if (other.hasResVersionConfig()) {
           mergeResVersionConfig(other.getResVersionConfig());
         }
-        if (other.getIsEnableClientHashDebug() != false) {
-          setIsEnableClientHashDebug(other.getIsEnableClientHashDebug());
+        if (other.getKLLPFNOLBHO() != false) {
+          setKLLPFNOLBHO(other.getKLLPFNOLBHO());
         }
         if (!other.getClientSilenceMd5().isEmpty()) {
           clientSilenceMd5_ = other.clientSilenceMd5_;
@@ -2706,8 +2706,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
             }
           }
         }
-        if (other.getIsEditor() != false) {
-          setIsEditor(other.getIsEditor());
+        if (other.getIsEnableClientHashDebug() != false) {
+          setIsEnableClientHashDebug(other.getIsEnableClientHashDebug());
         }
         if (other.getScInfo() != com.google.protobuf.ByteString.EMPTY) {
           setScInfo(other.getScInfo());
@@ -2719,8 +2719,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         if (other.getTargetHomeOwnerUid() != 0) {
           setTargetHomeOwnerUid(other.getTargetHomeOwnerUid());
         }
-        if (other.getIsUseAbilityHash() != false) {
-          setIsUseAbilityHash(other.getIsUseAbilityHash());
+        if (other.getJAGELBDJFJH() != false) {
+          setJAGELBDJFJH(other.getJAGELBDJFJH());
         }
         if (!other.getMsg().isEmpty()) {
           msg_ = other.msg_;
@@ -2743,8 +2743,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
           nextResourceUrl_ = other.nextResourceUrl_;
           onChanged();
         }
-        if (!other.getRegisterCps().isEmpty()) {
-          registerCps_ = other.registerCps_;
+        if (!other.getClientMd5().isEmpty()) {
+          clientMd5_ = other.clientMd5_;
           onChanged();
         }
         internalGetMutableBlockInfoMap().mergeFrom(
@@ -2753,8 +2753,8 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
           birthday_ = other.birthday_;
           onChanged();
         }
-        if (!other.getClientMd5().isEmpty()) {
-          clientMd5_ = other.clientMd5_;
+        if (!other.getRegisterCps().isEmpty()) {
+          registerCps_ = other.registerCps_;
           onChanged();
         }
         if (other.getIsDataNeedRelogin() != false) {
@@ -3735,33 +3735,33 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         return resVersionConfigBuilder_;
       }
 
-      private boolean isEnableClientHashDebug_ ;
+      private boolean kLLPFNOLBHO_ ;
       /**
-       * <code>bool is_enable_client_hash_debug = 179;</code>
-       * @return The isEnableClientHashDebug.
+       * <code>bool KLLPFNOLBHO = 179;</code>
+       * @return The kLLPFNOLBHO.
        */
       @java.lang.Override
-      public boolean getIsEnableClientHashDebug() {
-        return isEnableClientHashDebug_;
+      public boolean getKLLPFNOLBHO() {
+        return kLLPFNOLBHO_;
       }
       /**
-       * <code>bool is_enable_client_hash_debug = 179;</code>
-       * @param value The isEnableClientHashDebug to set.
+       * <code>bool KLLPFNOLBHO = 179;</code>
+       * @param value The kLLPFNOLBHO to set.
        * @return This builder for chaining.
        */
-      public Builder setIsEnableClientHashDebug(boolean value) {
+      public Builder setKLLPFNOLBHO(boolean value) {
         
-        isEnableClientHashDebug_ = value;
+        kLLPFNOLBHO_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_enable_client_hash_debug = 179;</code>
+       * <code>bool KLLPFNOLBHO = 179;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsEnableClientHashDebug() {
+      public Builder clearKLLPFNOLBHO() {
         
-        isEnableClientHashDebug_ = false;
+        kLLPFNOLBHO_ = false;
         onChanged();
         return this;
       }
@@ -4082,33 +4082,33 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         return featureBlockInfoListBuilder_;
       }
 
-      private boolean isEditor_ ;
+      private boolean isEnableClientHashDebug_ ;
       /**
-       * <code>bool is_editor = 451;</code>
-       * @return The isEditor.
+       * <code>bool is_enable_client_hash_debug = 451;</code>
+       * @return The isEnableClientHashDebug.
        */
       @java.lang.Override
-      public boolean getIsEditor() {
-        return isEditor_;
+      public boolean getIsEnableClientHashDebug() {
+        return isEnableClientHashDebug_;
       }
       /**
-       * <code>bool is_editor = 451;</code>
-       * @param value The isEditor to set.
+       * <code>bool is_enable_client_hash_debug = 451;</code>
+       * @param value The isEnableClientHashDebug to set.
        * @return This builder for chaining.
        */
-      public Builder setIsEditor(boolean value) {
+      public Builder setIsEnableClientHashDebug(boolean value) {
         
-        isEditor_ = value;
+        isEnableClientHashDebug_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_editor = 451;</code>
+       * <code>bool is_enable_client_hash_debug = 451;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsEditor() {
+      public Builder clearIsEnableClientHashDebug() {
         
-        isEditor_ = false;
+        isEnableClientHashDebug_ = false;
         onChanged();
         return this;
       }
@@ -4254,33 +4254,33 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         return this;
       }
 
-      private boolean isUseAbilityHash_ ;
+      private boolean jAGELBDJFJH_ ;
       /**
-       * <code>bool is_use_ability_hash = 1189;</code>
-       * @return The isUseAbilityHash.
+       * <code>bool JAGELBDJFJH = 1189;</code>
+       * @return The jAGELBDJFJH.
        */
       @java.lang.Override
-      public boolean getIsUseAbilityHash() {
-        return isUseAbilityHash_;
+      public boolean getJAGELBDJFJH() {
+        return jAGELBDJFJH_;
       }
       /**
-       * <code>bool is_use_ability_hash = 1189;</code>
-       * @param value The isUseAbilityHash to set.
+       * <code>bool JAGELBDJFJH = 1189;</code>
+       * @param value The jAGELBDJFJH to set.
        * @return This builder for chaining.
        */
-      public Builder setIsUseAbilityHash(boolean value) {
+      public Builder setJAGELBDJFJH(boolean value) {
         
-        isUseAbilityHash_ = value;
+        jAGELBDJFJH_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_use_ability_hash = 1189;</code>
+       * <code>bool JAGELBDJFJH = 1189;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsUseAbilityHash() {
+      public Builder clearJAGELBDJFJH() {
         
-        isUseAbilityHash_ = false;
+        jAGELBDJFJH_ = false;
         onChanged();
         return this;
       }
@@ -4694,78 +4694,78 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         return this;
       }
 
-      private java.lang.Object registerCps_ = "";
+      private java.lang.Object clientMd5_ = "";
       /**
-       * <code>string register_cps = 1594;</code>
-       * @return The registerCps.
+       * <code>string client_md5 = 1594;</code>
+       * @return The clientMd5.
        */
-      public java.lang.String getRegisterCps() {
-        java.lang.Object ref = registerCps_;
+      public java.lang.String getClientMd5() {
+        java.lang.Object ref = clientMd5_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          registerCps_ = s;
+          clientMd5_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string register_cps = 1594;</code>
-       * @return The bytes for registerCps.
+       * <code>string client_md5 = 1594;</code>
+       * @return The bytes for clientMd5.
        */
       public com.google.protobuf.ByteString
-          getRegisterCpsBytes() {
-        java.lang.Object ref = registerCps_;
+          getClientMd5Bytes() {
+        java.lang.Object ref = clientMd5_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          registerCps_ = b;
+          clientMd5_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string register_cps = 1594;</code>
-       * @param value The registerCps to set.
+       * <code>string client_md5 = 1594;</code>
+       * @param value The clientMd5 to set.
        * @return This builder for chaining.
        */
-      public Builder setRegisterCps(
+      public Builder setClientMd5(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        registerCps_ = value;
+        clientMd5_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string register_cps = 1594;</code>
+       * <code>string client_md5 = 1594;</code>
        * @return This builder for chaining.
        */
-      public Builder clearRegisterCps() {
+      public Builder clearClientMd5() {
         
-        registerCps_ = getDefaultInstance().getRegisterCps();
+        clientMd5_ = getDefaultInstance().getClientMd5();
         onChanged();
         return this;
       }
       /**
-       * <code>string register_cps = 1594;</code>
-       * @param value The bytes for registerCps to set.
+       * <code>string client_md5 = 1594;</code>
+       * @param value The bytes for clientMd5 to set.
        * @return This builder for chaining.
        */
-      public Builder setRegisterCpsBytes(
+      public Builder setClientMd5Bytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        registerCps_ = value;
+        clientMd5_ = value;
         onChanged();
         return this;
       }
@@ -4977,78 +4977,78 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
         return this;
       }
 
-      private java.lang.Object clientMd5_ = "";
+      private java.lang.Object registerCps_ = "";
       /**
-       * <code>string client_md5 = 1728;</code>
-       * @return The clientMd5.
+       * <code>string register_cps = 1728;</code>
+       * @return The registerCps.
        */
-      public java.lang.String getClientMd5() {
-        java.lang.Object ref = clientMd5_;
+      public java.lang.String getRegisterCps() {
+        java.lang.Object ref = registerCps_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          clientMd5_ = s;
+          registerCps_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string client_md5 = 1728;</code>
-       * @return The bytes for clientMd5.
+       * <code>string register_cps = 1728;</code>
+       * @return The bytes for registerCps.
        */
       public com.google.protobuf.ByteString
-          getClientMd5Bytes() {
-        java.lang.Object ref = clientMd5_;
+          getRegisterCpsBytes() {
+        java.lang.Object ref = registerCps_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          clientMd5_ = b;
+          registerCps_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string client_md5 = 1728;</code>
-       * @param value The clientMd5 to set.
+       * <code>string register_cps = 1728;</code>
+       * @param value The registerCps to set.
        * @return This builder for chaining.
        */
-      public Builder setClientMd5(
+      public Builder setRegisterCps(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        clientMd5_ = value;
+        registerCps_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string client_md5 = 1728;</code>
+       * <code>string register_cps = 1728;</code>
        * @return This builder for chaining.
        */
-      public Builder clearClientMd5() {
+      public Builder clearRegisterCps() {
         
-        clientMd5_ = getDefaultInstance().getClientMd5();
+        registerCps_ = getDefaultInstance().getRegisterCps();
         onChanged();
         return this;
       }
       /**
-       * <code>string client_md5 = 1728;</code>
-       * @param value The bytes for clientMd5 to set.
+       * <code>string register_cps = 1728;</code>
+       * @param value The bytes for registerCps to set.
        * @return This builder for chaining.
        */
-      public Builder setClientMd5Bytes(
+      public Builder setRegisterCpsBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        clientMd5_ = value;
+        registerCps_ = value;
         onChanged();
         return this;
       }
@@ -5358,7 +5358,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       "\n\024PlayerLoginRsp.proto\032\032ShortAbilityHash" +
       "Pair.proto\032\026ResVersionConfig.proto\032\026Feat" +
       "ureBlockInfo.proto\032\024StopServerInfo.proto" +
-      "\032\017BlockInfo.proto\"\343\t\n\016PlayerLoginRsp\022\025\n\r" +
+      "\032\017BlockInfo.proto\"\335\t\n\016PlayerLoginRsp\022\025\n\r" +
       "is_new_player\030\001 \001(\010\022\020\n\010game_biz\030\002 \001(\t\022\022\n" +
       "\nis_relogin\030\003 \001(\010\022\023\n\013player_data\030\004 \001(\014\022\022" +
       "\n\ntarget_uid\030\005 \001(\r\022\023\n\013is_transfer\030\006 \001(\010\022" +
@@ -5370,27 +5370,27 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
       "nt_data_version\030\017 \001(\r\022\020\n\010is_audit\030C \001(\010\022" +
       "5\n\026short_ability_hash_map\030Z \003(\0132\025.ShortA" +
       "bilityHashPair\022-\n\022res_version_config\030q \001" +
-      "(\0132\021.ResVersionConfig\022$\n\033is_enable_clien" +
-      "t_hash_debug\030\263\001 \001(\010\022\033\n\022client_silence_md" +
-      "5\030\371\001 \001(\t\0223\n\027feature_block_info_list\030\320\002 \003" +
-      "(\0132\021.FeatureBlockInfo\022\022\n\tis_editor\030\303\003 \001(" +
-      "\010\022\020\n\007sc_info\030\231\006 \001(\014\022&\n\035client_silence_ve" +
-      "rsion_suffix\030\310\010 \001(\t\022\036\n\025target_home_owner" +
-      "_uid\030\373\010 \001(\r\022\034\n\023is_use_ability_hash\030\245\t \001(" +
-      "\010\022\014\n\003msg\030\267\t \001(\t\022\023\n\nis_sc_open\030\222\n \001(\010\022\030\n\017" +
-      "total_tick_time\030\260\013 \001(\001\022\036\n\025client_version" +
-      "_suffix\030\322\013 \001(\t\022%\n\013stop_server\030\372\013 \001(\0132\017.S" +
-      "topServerInfo\022\032\n\021next_resource_url\030\215\014 \001(" +
-      "\t\022\025\n\014register_cps\030\272\014 \001(\t\022:\n\016block_info_m" +
-      "ap\030\274\014 \003(\0132!.PlayerLoginRsp.BlockInfoMapE" +
-      "ntry\022\021\n\010birthday\030\231\r \001(\t\022\023\n\nclient_md5\030\300\r" +
-      " \001(\t\022\035\n\024is_data_need_relogin\030\315\016 \001(\010\022\025\n\014c" +
-      "ountry_code\030\352\016 \001(\t\0223\n\027next_res_version_c" +
-      "onfig\030\267\017 \001(\0132\021.ResVersionConfig\0325\n\023Abili" +
-      "tyHashMapEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
-      "(\005:\0028\001\032?\n\021BlockInfoMapEntry\022\013\n\003key\030\001 \001(\r" +
-      "\022\031\n\005value\030\002 \001(\0132\n.BlockInfo:\0028\001B\033\n\031raide" +
-      "ngame.cache.protobufb\006proto3"
+      "(\0132\021.ResVersionConfig\022\024\n\013KLLPFNOLBHO\030\263\001 " +
+      "\001(\010\022\033\n\022client_silence_md5\030\371\001 \001(\t\0223\n\027feat" +
+      "ure_block_info_list\030\320\002 \003(\0132\021.FeatureBloc" +
+      "kInfo\022$\n\033is_enable_client_hash_debug\030\303\003 " +
+      "\001(\010\022\020\n\007sc_info\030\231\006 \001(\014\022&\n\035client_silence_" +
+      "version_suffix\030\310\010 \001(\t\022\036\n\025target_home_own" +
+      "er_uid\030\373\010 \001(\r\022\024\n\013JAGELBDJFJH\030\245\t \001(\010\022\014\n\003m" +
+      "sg\030\267\t \001(\t\022\023\n\nis_sc_open\030\222\n \001(\010\022\030\n\017total_" +
+      "tick_time\030\260\013 \001(\001\022\036\n\025client_version_suffi" +
+      "x\030\322\013 \001(\t\022%\n\013stop_server\030\372\013 \001(\0132\017.StopSer" +
+      "verInfo\022\032\n\021next_resource_url\030\215\014 \001(\t\022\023\n\nc" +
+      "lient_md5\030\272\014 \001(\t\022:\n\016block_info_map\030\274\014 \003(" +
+      "\0132!.PlayerLoginRsp.BlockInfoMapEntry\022\021\n\010" +
+      "birthday\030\231\r \001(\t\022\025\n\014register_cps\030\300\r \001(\t\022\035" +
+      "\n\024is_data_need_relogin\030\315\016 \001(\010\022\025\n\014country" +
+      "_code\030\352\016 \001(\t\0223\n\027next_res_version_config\030" +
+      "\267\017 \001(\0132\021.ResVersionConfig\0325\n\023AbilityHash" +
+      "MapEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001" +
+      "\032?\n\021BlockInfoMapEntry\022\013\n\003key\030\001 \001(\r\022\031\n\005va" +
+      "lue\030\002 \001(\0132\n.BlockInfo:\0028\001B\033\n\031raidengame." +
+      "cache.protobufb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5406,7 +5406,7 @@ raidengame.cache.protobuf.BlockInfoOuterClass.BlockInfo defaultValue);
     internal_static_PlayerLoginRsp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PlayerLoginRsp_descriptor,
-        new java.lang.String[] { "IsNewPlayer", "GameBiz", "IsRelogin", "PlayerData", "TargetUid", "IsTransfer", "AbilityHashCode", "LoginRand", "PlayerDataVersion", "ClientSilenceDataVersion", "Retcode", "AbilityHashMap", "ClientDataVersion", "IsAudit", "ShortAbilityHashMap", "ResVersionConfig", "IsEnableClientHashDebug", "ClientSilenceMd5", "FeatureBlockInfoList", "IsEditor", "ScInfo", "ClientSilenceVersionSuffix", "TargetHomeOwnerUid", "IsUseAbilityHash", "Msg", "IsScOpen", "TotalTickTime", "ClientVersionSuffix", "StopServer", "NextResourceUrl", "RegisterCps", "BlockInfoMap", "Birthday", "ClientMd5", "IsDataNeedRelogin", "CountryCode", "NextResVersionConfig", });
+        new java.lang.String[] { "IsNewPlayer", "GameBiz", "IsRelogin", "PlayerData", "TargetUid", "IsTransfer", "AbilityHashCode", "LoginRand", "PlayerDataVersion", "ClientSilenceDataVersion", "Retcode", "AbilityHashMap", "ClientDataVersion", "IsAudit", "ShortAbilityHashMap", "ResVersionConfig", "KLLPFNOLBHO", "ClientSilenceMd5", "FeatureBlockInfoList", "IsEnableClientHashDebug", "ScInfo", "ClientSilenceVersionSuffix", "TargetHomeOwnerUid", "JAGELBDJFJH", "Msg", "IsScOpen", "TotalTickTime", "ClientVersionSuffix", "StopServer", "NextResourceUrl", "ClientMd5", "BlockInfoMap", "Birthday", "RegisterCps", "IsDataNeedRelogin", "CountryCode", "NextResVersionConfig", });
     internal_static_PlayerLoginRsp_AbilityHashMapEntry_descriptor =
       internal_static_PlayerLoginRsp_descriptor.getNestedTypes().get(0);
     internal_static_PlayerLoginRsp_AbilityHashMapEntry_fieldAccessorTable = new

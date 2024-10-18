@@ -26,7 +26,7 @@ public class HandlerPlayerLoginReq extends Packet {
             return;
         }
 
-        if(ConfigManager.serverConfig.gameInfo.isBeta && !ConfigManager.serverConfig.gameInfo.betaAccountIds.contains(req.getAccountUid())) {
+        if(ConfigManager.serverConfig.gameInfo.isBeta && !ConfigManager.serverConfig.gameInfo.betaAccountIds.contains(session.getAccount().getId())) {
             // Beta only.
             session.send(new PacketPlayerLoginRsp(session, req, PacketRetcodes.RET_BETA_ACCESS_DENIED, "SomebodyGotAccessToBeta"));
             return;

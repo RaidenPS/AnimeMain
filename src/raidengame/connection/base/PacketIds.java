@@ -15,6 +15,16 @@ public final class PacketIds {
     public static final int SetPlayerBornDataReq = 25726;
     public static final int SetPlayerBornDataRsp = 26454;
 
+    // Scene
+    public static final int GetScenePointReq = 23449;
+    public static final int GetSceneAreaReq = 8189;
+    public static final int EnterSceneReadyReq = 20524;
+    public static final int EnterSceneReadyRsp = 7914;
+    public static final int PathfindingEnterSceneReq = 2374;
+    public static final int SceneInitFinishReq = 377;
+    public static final int ToTheMoonEnterSceneReq = 6116;
+    public static final int ToTheMoonEnterSceneRsp = 2333;
+
     // Social
     public static final int GetPlayerBlacklistReq = 6441;
     public static final int GetPlayerFriendListReq = 21607;
@@ -22,9 +32,15 @@ public final class PacketIds {
     // Login
     public static final int GetShopReq = 4619;
     public static final int SetOpenStateReq = 24291;
+    public static final int GetRegionSearchReq = 27191;
+    public static final int PersonalLineAllDataReq = 28403;
+    public static final int PersonalLineAllDataRsp = 28577;
 
     // Notifies
+    public static final int ClientAbilityInitFinishNotify = 28413;
+    public static final int EnterScenePeerNotify = 9626;
     public static final int DoSetPlayerBornDataNotify = 5351;
+    public static final int PlayerEnterSceneNotify = 3595;
     public static final int PlayerKickNotify = 1368;
     public static final int ServerDisconnectClientNotify = 1387;
 }
