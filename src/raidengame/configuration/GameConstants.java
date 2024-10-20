@@ -1,5 +1,8 @@
 package raidengame.configuration;
 
+// Imports
+import raidengame.game.world.Position;
+
 /**
  * Constants that are associated with the official game. Do not change if you dont know what are you doing.
  */
@@ -11,4 +14,5 @@ public final class GameConstants {
     public static final int MAIN_CHARACTER_FEMALE = 10000007;
     public static final int NICKNAME_MAX_LEN = 14;
     public static final int NICKNAME_DIGIT_MAX_LEN = 6;
+    public static final Position SPAWN_POSITION = new Position(2747, 194, -1719);
 }

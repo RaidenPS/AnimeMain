@@ -43,5 +43,6 @@ public class SettingsContainer {
         public int maxPlayers = 5;
         public String rawVersion = "OSRELWin5.0.0_R26458901_S26368837_D26487341";
         public boolean enableSwitchCharacters = true;
+        public boolean enableResources = false;
     }
 }
